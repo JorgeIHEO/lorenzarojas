@@ -46,7 +46,8 @@ body {
   overflow-x: hidden;
 }
 
-img, iframe, video { display: block; max-width: 100%; }
+img, video { display: block; max-width: 100%; }
+iframe { display: block; }
 ul { list-style: none; }
 a  { text-decoration: none; color: inherit; }
 
@@ -89,28 +90,31 @@ a  { text-decoration: none; color: inherit; }
   align-items: center;
   gap: .5rem;
   padding: .85rem 2rem;
-  border-radius: 2px;
+  border-radius: 100px;
   font-family: var(--font-body);
   font-size: .875rem;
   font-weight: 500;
   letter-spacing: .06em;
   cursor: pointer;
   transition: transform .25s var(--ease-out), box-shadow .25s var(--ease-out), background .2s, border-color .2s, color .2s;
-  border: 1.5px solid transparent;
+  border: 2px solid #ffffff;
   white-space: nowrap;
   text-align: center;
 }
 .btn:hover  { transform: translateY(-2px); }
 .btn:active { transform: translateY(0); }
 
-.btn--primary  { background: var(--sage); color: var(--white); border-color: var(--sage); }
-.btn--primary:hover { background: var(--bark-mid); border-color: var(--bark-mid); }
+/* sage: #8A9E7E → 50% más oscuro: #455F3F */
+.btn--primary  { background: var(--sage); color: var(--white); border-color: #ffffff; }
+.btn--primary:hover { background: #455F3F; border-color: #ffffff; color: var(--white); }
 
-.btn--secondary { background: var(--bark); color: var(--white); border-color: var(--bark); }
-.btn--secondary:hover { background: var(--bark-mid); }
+/* bark: #2C2416 → 50% más oscuro: #16120B */
+.btn--secondary { background: var(--bark); color: var(--white); border-color: #ffffff; }
+.btn--secondary:hover { background: #16120B; border-color: #ffffff; color: var(--white); }
 
-.btn--outline { background: transparent; color: var(--bark); border-color: var(--bark-soft); }
-.btn--outline:hover { background: var(--bark); color: var(--white); border-color: var(--bark); }
+/* outline: fondo transparente → hover bark oscuro */
+.btn--outline { background: transparent; color: var(--bark); border-color: #ffffff; }
+.btn--outline:hover { background: #16120B; color: var(--white); border-color: #ffffff; }
 
 .btn--large { padding: 1.1rem 2.75rem; font-size: 1rem; }
 
@@ -189,14 +193,14 @@ a  { text-decoration: none; color: inherit; }
   font-weight: 500;
   letter-spacing: .08em;
   padding: .55rem 1.25rem;
-  border: 1.5px solid rgba(255, 255, 255, .5);
+  border: 2px solid #ffffff;
   color: var(--white);
-  border-radius: 2px;
+  border-radius: 100px;
   transition: background .3s, color .3s, border-color .3s;
 }
-.nav__cta:hover { background: var(--white); color: var(--bark); border-color: var(--white); }
-.nav.scrolled .nav__cta       { border-color: var(--sage); color: var(--sage); }
-.nav.scrolled .nav__cta:hover { background: var(--sage); color: var(--white); }
+.nav__cta:hover { background: #16120B; color: var(--white); border-color: #ffffff; }
+.nav.scrolled .nav__cta       { border-color: #ffffff; color: var(--bark); }
+.nav.scrolled .nav__cta:hover { background: #16120B; color: var(--white); border-color: #ffffff; }
 
 /* Hamburger */
 .nav__hamburger {
@@ -247,6 +251,7 @@ a  { text-decoration: none; color: inherit; }
   height: 56.25vw;
   min-width: 100%;
   min-height: 100%;
+  max-width: none;
   transform: translate(-50%, -50%);
   pointer-events: none;
   border: none;
@@ -312,7 +317,18 @@ a  { text-decoration: none; color: inherit; }
   line-height: 1.65;
 }
 
-.hero__btn { margin-inline: auto; }
+/* rgb(216,100,245) → 50% oscuro: rgb(108,50,122) */
+.hero__btn {
+  margin-inline: auto;
+  background: rgb(216, 100, 245) !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+.hero__btn:hover {
+  background: rgb(108, 50, 122) !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
 
 .hero__scroll-hint {
   position: absolute;
@@ -527,19 +543,22 @@ a  { text-decoration: none; color: inherit; }
   align-items: center;
   justify-content: center;
   gap: 4rem;
-  background: var(--white);
-  border-radius: 4px;
+  background: rgb(56, 62, 66);
+  border-radius: 24px;
   padding: 2.5rem;
   text-align: center;
 }
-.modality__divider { width: 1px; height: 80px; background: var(--cream-deep); }
-.modality__icon { font-size: 1.75rem; margin-bottom: .5rem; }
-.modality h4 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 400; margin-bottom: .35rem; }
-.modality p { font-size: .875rem; color: var(--bark-soft); max-width: 24ch; }
+.modality__divider { width: 1px; height: 80px; background: rgba(142, 159, 171, 0.3); }
+.modality__icon { font-size: 1.75rem; margin-bottom: .5rem; color: rgb(142, 159, 171); }
+.modality h4 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 400; margin-bottom: .35rem; color: rgb(142, 159, 171); }
+.modality p { font-size: .875rem; color: rgb(142, 159, 171); max-width: 24ch; }
 
 /* ── CASOS / REELS ───────────────────────────────────────────── */
-.cases { background: var(--cream); padding-block: clamp(5rem, 10vw, 9rem); }
+.cases { background: rgb(56, 62, 66); padding-block: clamp(5rem, 10vw, 9rem); }
 .cases__header { margin-bottom: 3.5rem; }
+.cases__header .section-title { color: rgb(142, 159, 171); }
+.cases__header .section-sub { color: rgb(142, 159, 171); }
+.cases__header .label { color: rgb(142, 159, 171); }
 .cases__reels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
 .reel-card { display: flex; flex-direction: column; gap: 1rem; }
 .reel-card__frame {
@@ -552,8 +571,8 @@ a  { text-decoration: none; color: inherit; }
   box-shadow: 0 12px 40px rgba(44, 36, 22, .12);
 }
 .reel-card__frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
-.reel-card__name { font-size: .78rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--sage); }
-.reel-card__quote { font-family: var(--font-display); font-size: 1.15rem; font-style: italic; color: var(--bark); line-height: 1.45; }
+.reel-card__name { font-size: .78rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgb(142, 159, 171); }
+.reel-card__quote { font-family: var(--font-display); font-size: 1.15rem; font-style: italic; color: rgb(142, 159, 171); line-height: 1.45; }
 
 .reel-card__placeholder {
   position: absolute;
@@ -596,7 +615,24 @@ a  { text-decoration: none; color: inherit; }
 .booking__trust { display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: center; margin-bottom: 2.5rem; }
 .trust-item { font-size: .8rem; font-weight: 400; letter-spacing: .06em; color: rgba(255,255,255,.65); display: flex; align-items: center; gap: .5rem; }
 .trust-item span { color: var(--sage-light); font-size: 1.05rem; }
-.booking__note { margin-top: 1rem; font-size: .72rem; color: rgba(255,255,255,.3); letter-spacing: .1em; text-transform: uppercase; }
+/* rgb(255,0,255) → 50% oscuro: rgb(127,0,127) */
+.booking .btn--primary,
+.booking .btn--large {
+  background: rgb(255, 0, 255) !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  font-family: var(--font-display) !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  text-align: center;
+  justify-content: center;
+}
+.booking .btn--primary:hover,
+.booking .btn--large:hover {
+  background: rgb(127, 0, 127) !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
 
 /* ── FOOTER ──────────────────────────────────────────────────── */
 .footer { background: #1A1208; padding-block: 3.5rem 2rem; }
@@ -676,4 +712,20 @@ a  { text-decoration: none; color: inherit; }
   .hero__pain-words { display: none; }
   .services__grid   { max-width: 100%; }
   .about__images    { height: 320px; }
+}
+.booking__note { margin-top: 1rem; font-size: .72rem; color: rgba(255,255,255,.3); letter-spacing: .1em; text-transform: uppercase; }
+
+/* ── BOTÓN LORENZA (sobre mí) ────────────────────────────────── */
+/* rgb(255,163,43) → 50% oscuro: rgb(127,81,21) */
+.btn--lorenza {
+  background: rgb(255, 163, 43) !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  font-family: var(--font-display) !important;
+  font-weight: 600 !important;
+}
+.btn--lorenza:hover {
+  background: rgb(127, 81, 21) !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
 }
