@@ -35,30 +35,23 @@
     "url": "https://lorenzarojas.cl",
     "address": { "@type": "PostalAddress", "addressCountry": "CL" },
     "sameAs": [
-      "https://www.instagram.com/lorenz.nutri/",
-      "https://cl.linkedin.com/in/lorenza-rojas-cea-29560129a"
+      "https://www.instagram.com/lorenzarojas",
+      "https://www.linkedin.com/in/lorenzarojas"
     ]
   }
   </script>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
 
-  <!-- Hoja de estilos -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div id="scroll-progress" aria-hidden="true"></div>
 
-  <!-- ══════════════════════════════════════════════════════════
-       NAV
-  ══════════════════════════════════════════════════════════ -->
+  <!-- NAV -->
   <nav class="nav" id="nav" aria-label="Menú principal">
-    <a href="#inicio" class="nav__logo">
-      <img src="images/lorenza_rojas_logo_transparente.svg" alt="Lorenza Rojas Nutricionista" height="42" loading="eager" />
-    </a>
+    <a href="#inicio" class="nav__logo">Lorenza Rojas</a>
 
     <button
       class="nav__hamburger"
@@ -86,11 +79,7 @@
   </nav>
 
 
-  <!-- ══════════════════════════════════════════════════════════
-       HERO — Video Vimeo de fondo
-       REEMPLAZA el ID del video Vimeo en la URL del iframe:
-       https://player.vimeo.com/video/TU_ID_AQUI?autoplay=1&muted=1&loop=1&background=1
-  ══════════════════════════════════════════════════════════ -->
+  <!-- HERO -->
   <section class="hero" id="inicio" aria-label="Sección principal">
 
     <div class="hero__video-wrap">
@@ -109,27 +98,26 @@
     <div class="hero__content" data-reveal>
 
       <div class="hero__pain-words" aria-label="Dolores comunes de los pacientes">
-        <span class="pain-word">¿Llevas años probando dietas que nunca duran?</span>
-        <span class="pain-word">¿La comida te genera culpa, no placer?</span>
-        <span class="pain-word">¿Te despiertas agotada aunque hayas dormido?</span>
-        <span class="pain-word">¿Y si el problema nunca fue tu fuerza de voluntad?</span>
-        <span class="pain-word">¿Lista para dejar de empezar el lunes?</span>
+        <span class="pain-word" style="--d:0s">¿Cansada sin razón?</span>
+        <span class="pain-word" style="--d:.3s">¿Dietas que nunca funcionan?</span>
+        <span class="pain-word" style="--d:.6s">¿Hinchazón constante?</span>
+        <span class="pain-word" style="--d:.9s">¿Sin energía para vivir?</span>
       </div>
 
       <h1 class="hero__headline">
-        Tu <span class="hero__strong">cuerpo merece</span><br />
-        <em>una nutrición que <span class="hero__strong">sí funciona.</span></em>
+        Tu cuerpo merece<br />
+        <em>una nutrición que sí funciona.</em>
       </h1>
 
       <p class="hero__sub">
         Planes nutricionales personalizados que transforman<br class="br-desk" />
-        tu relación con la comida, sin dietas extremas.
+        tu relación con la comida — sin dietas extremas.
       </p>
 
       <a
         href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl"
         target="_blank" rel="noopener"
-        class="btn btn--primary hero__btn btn--hero-cta btn--magnetic"
+        class="btn btn--primary hero__btn"
         aria-label="Agendar consulta con Lorenza Rojas"
       >
         Agenda tu consulta ahora →
@@ -143,17 +131,12 @@
   </section>
 
 
-  <!-- ══════════════════════════════════════════════════════════
-       SOBRE MÍ
-  ══════════════════════════════════════════════════════════ -->
+  <!-- SOBRE MÍ -->
   <section class="about" id="sobre-mi" aria-label="Sobre Lorenza Rojas">
     <div class="container">
       <div class="about__inner">
 
-        <!-- orbs sección sobre mí -->
-        <div class="deco-orb deco-orb--p1" style="width:420px;height:420px;top:-80px;left:-120px;animation:floatA 9s ease-in-out infinite;" data-speed="0.06" data-dir="-1"></div>
-        <div class="deco-orb deco-orb--s3" style="width:260px;height:260px;bottom:40px;right:-60px;opacity:.1;animation:floatB 12s ease-in-out infinite;" data-speed="0.04"></div>
-        <div class="about__images" data-reveal="scale-in">
+        <div class="about__images" data-reveal>
           <div class="about__img-main">
             <img
               src="images/lorenza-principal.jpg"
@@ -172,31 +155,33 @@
           </div>
         </div>
 
-        <div class="about__text" data-reveal="slide-left">
+        <div class="about__text" data-reveal>
           <span class="label">Sobre mí</span>
 
           <h2 class="about__title">
             Soy Lorenza Rojas,<br />
-            <em>nutricionista especializada en bienestar.</em>
+            <em>nutricionista certificada.</em>
           </h2>
 
           <p class="about__hook">
-            Ayudo a personas a mejorar su relación con la comida, recuperar energía
-            y sentirse bien con su cuerpo desde un enfoque realista, sostenible y sin extremos.
+            Sé exactamente cómo se siente llegar al final del día sin energía,
+            con el cuerpo inflamado y la cabeza llena de culpa por lo que comiste.
+            Lo viví, lo estudié, y encontré el camino de salida.
           </p>
 
           <p class="about__desc">
-            Hace más de 7 años acompaño procesos de transformación física y bienestar integral,
-            trabajando no solo la alimentación, sino también hábitos, descanso, rutina y estilo
-            de vida para lograr cambios duraderos.
+            Con más de X años acompañando a personas a reconectar con su cuerpo,
+            mi enfoque va más allá de las calorías: trabajamos juntos tus hábitos,
+            tu estilo de vida y tu relación con la comida para lograr resultados
+            reales y duraderos.
           </p>
 
-          <p class="about__desc">
-            Creo que el bienestar nace de aprender a escuchar tu cuerpo y construir hábitos
-            que realmente disfrutes y puedas mantener en el tiempo.
-            Si quieres mejorar tu bienestar y comenzar un cambio saludable adaptado a ti,
-            estaré feliz de acompañarte.
-          </p>
+          <ul class="about__credentials" aria-label="Credenciales profesionales">
+            <li>🎓 Licenciada en Nutrición y Dietética — [Universidad]</li>
+            <li>✦ Especialización en [área de especialidad]</li>
+            <li>✦ +X años de experiencia clínica</li>
+            <li>✦ Atención presencial y online en toda Latinoamérica</li>
+          </ul>
 
           <a
             href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl"
@@ -212,16 +197,11 @@
   </section>
 
 
-  <!-- ══════════════════════════════════════════════════════════
-       SERVICIOS & PLANES
-  ══════════════════════════════════════════════════════════ -->
+  <!-- SERVICIOS -->
   <section class="services" id="servicios" aria-label="Servicios y planes nutricionales">
     <div class="container">
 
-      <!-- orbs servicios -->
-      <div class="deco-orb deco-orb--s1" style="width:380px;height:380px;top:-60px;right:-80px;opacity:.12;animation:floatB 10s ease-in-out infinite;" data-speed="0.05"></div>
-      <div class="deco-orb deco-orb--p3" style="width:300px;height:300px;bottom:80px;left:-100px;opacity:.1;animation:floatA 14s ease-in-out infinite;" data-speed="0.04" data-dir="-1"></div>
-      <div class="services__header" data-reveal="clip-up">
+      <div class="services__header" data-reveal>
         <span class="label">Lo que ofrezco</span>
         <h2 class="section-title">Servicios &amp; Planes</h2>
         <p class="section-sub">Encuentra la modalidad que mejor se adapta a tu vida y tus objetivos.</p>
@@ -229,63 +209,72 @@
 
       <div class="services__grid">
 
-        <!-- Sesión individual -->
-        <article class="service-card" data-reveal="slide-right" data-stagger="1" aria-label="Consulta individual">
+        <!-- Consulta individual -->
+        <article class="service-card" data-reveal aria-label="Consulta individual">
           <div class="service-card__tag">Sesión única</div>
           <div class="service-card__icon" aria-hidden="true">◆</div>
           <h3 class="service-card__title">Consulta Individual</h3>
           <p class="service-card__desc">
-            Evaluación nutricional completa, análisis de hábitos y plan personalizado en una sesión. Ideal para empezar con claridad.
+            Evaluación nutricional completa enfocada en tus hábitos, alimentación, objetivos y estilo de vida. Ideal para comenzar con claridad, estructura y una estrategia personalizada según tus necesidades.
           </p>
           <ul class="service-card__features">
-            <li>✓ Anamnesis alimentaria detallada</li>
+            <li>✓ Evaluación nutricional integral</li>
+            <li>✓ Análisis de hábitos y rutina</li>
             <li>✓ Plan nutricional personalizado</li>
             <li>✓ Material de apoyo digital</li>
             <li>✓ Modalidad presencial u online</li>
           </ul>
-          <a href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl" target="_blank" rel="noopener" class="btn btn--outline">Agendar sesión →</a>
+          <div class="service-card__btn-wrap">
+            <a href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl" target="_blank" rel="noopener" class="btn btn--outline">Agendar sesión →</a>
+          </div>
         </article>
 
         <!-- Pack 3 meses — DESTACADO -->
-        <article class="service-card service-card--featured" data-reveal data-stagger="2" aria-label="Pack 3 meses">
+        <article class="service-card service-card--featured" data-reveal aria-label="Pack 3 meses">
           <div class="service-card__tag">Más popular</div>
           <div class="service-card__icon" aria-hidden="true">✦</div>
           <h3 class="service-card__title">Pack 3 Meses</h3>
           <p class="service-card__desc">
-            Acompañamiento continuo durante 3 meses para crear hábitos sólidos y ver resultados reales y sostenibles.
+            Un proceso de acompañamiento pensado para ayudarte a crear hábitos sostenibles, mejorar tu alimentación y comenzar a ver cambios reales en tu bienestar, energía y composición corporal.
           </p>
           <ul class="service-card__features">
             <li>✓ Consultas mensuales de seguimiento</li>
-            <li>✓ Plan ajustado mes a mes</li>
-            <li>✓ Soporte por WhatsApp</li>
-            <li>✓ Acceso a recetario exclusivo</li>
-            <li>✓ Presencial u online</li>
+            <li>✓ Ajustes personalizados durante el proceso</li>
+            <li>✓ Soporte vía WhatsApp</li>
+            <li>✓ Material práctico y recetario digital</li>
+            <li>✓ Estrategias de hábitos y organización</li>
+            <li>✓ Modalidad presencial u online</li>
           </ul>
-          <a href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl" target="_blank" rel="noopener" class="btn btn--primary">Quiero este plan →</a>
+          <div class="service-card__btn-wrap">
+            <a href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl" target="_blank" rel="noopener" class="btn btn--primary">Quiero este plan →</a>
+          </div>
         </article>
 
         <!-- Pack 6 meses -->
-        <article class="service-card" data-reveal="slide-left" data-stagger="3" aria-label="Pack 6 meses">
+        <article class="service-card" data-reveal aria-label="Pack 6 meses">
           <div class="service-card__tag">Transformación total</div>
           <div class="service-card__icon" aria-hidden="true">◈</div>
           <h3 class="service-card__title">Pack 6 Meses</h3>
           <p class="service-card__desc">
-            El proceso completo de transformación: cuerpo, hábitos y mentalidad. Para quienes van en serio con su bienestar.
+            Un acompañamiento más profundo y completo para quienes buscan transformar sus hábitos, mejorar su relación con la comida y generar cambios sostenibles a largo plazo.
           </p>
           <ul class="service-card__features">
-            <li>✓ Todo lo del Pack 3 meses</li>
-            <li>✓ Análisis de composición corporal</li>
-            <li>✓ Módulo de relación con la comida</li>
+            <li>✓ Todo lo incluido en el Pack 3 Meses</li>
+            <li>✓ Seguimiento continuo del progreso y composición corporal</li>
+            <li>✓ Trabajo más profundo en hábitos y bienestar</li>
             <li>✓ Prioridad en agenda</li>
-            <li>✓ Sesión adicional al cierre</li>
+            <li>✓ Sesión adicional de cierre y mantenimiento</li>
+            <li>✓ Modalidad presencial u online</li>
           </ul>
-          <a href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl" target="_blank" rel="noopener" class="btn btn--outline">Agendar sesión →</a>
+          <div class="service-card__btn-wrap">
+            <a href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl" target="_blank" rel="noopener" class="btn btn--outline">Quiero este plan →</a>
+          </div>
         </article>
 
       </div>
 
       <!-- Modalidades -->
-      <div class="modalities" data-reveal="scale-in">
+      <div class="modalities" data-reveal>
         <div class="modality">
           <span class="modality__icon" aria-hidden="true">📍</span>
           <h4>Presencial</h4>
@@ -303,19 +292,11 @@
   </section>
 
 
-  <!-- ══════════════════════════════════════════════════════════
-       CASOS REALES — REELS VERTICALES (9:16)
-       Para agregar reels de Instagram, usa este formato de iframe:
-       <iframe src="https://www.instagram.com/reel/TU_REEL_ID/embed" ...></iframe>
-       Reemplaza TU_REEL_ID con el ID del reel (parte final de la URL)
-  ══════════════════════════════════════════════════════════ -->
+  <!-- CASOS REALES -->
   <section class="cases" id="casos" aria-label="Casos reales y testimonios en video">
     <div class="container">
 
-      <!-- orbs casos -->
-      <div class="deco-orb deco-orb--s2" style="width:340px;height:340px;top:60px;left:-100px;opacity:.11;animation:floatA 11s ease-in-out infinite;" data-speed="0.05" data-dir="-1"></div>
-      <div class="deco-orb deco-orb--p3" style="width:280px;height:280px;bottom:0;right:-80px;opacity:.1;animation:floatB 13s ease-in-out infinite;" data-speed="0.06"></div>
-      <div class="cases__header" data-reveal="clip-up">
+      <div class="cases__header" data-reveal>
         <span class="label">Historias reales</span>
         <h2 class="section-title">Resultados que hablan</h2>
         <p class="section-sub">Personas que decidieron cambiar. Esto es lo que lograron.</p>
@@ -323,23 +304,14 @@
 
       <div class="cases__reels" role="list">
 
-        <!-- Reel 1 — Reemplaza REEL_ID_1 con el ID real del reel de Instagram -->
-        <div class="reel-card" data-reveal="slide-right" data-stagger="1" role="listitem">
+        <div class="reel-card" data-reveal role="listitem">
           <div class="reel-card__frame">
-            <!-- OPCIÓN A: Reel de Instagram
-                 <iframe src="https://www.instagram.com/reel/REEL_ID_1/embed" scrolling="no" allowtransparency="true" allowfullscreen="true"></iframe>
-            -->
-            <!-- OPCIÓN B: Video de Vimeo
-                 <iframe src="https://player.vimeo.com/video/VIMEO_ID?autoplay=0&loop=1" allow="autoplay; fullscreen"></iframe>
-            -->
-            <iframe
-              src="https://www.instagram.com/reel/DVcL2mBAEey/embed/"
-              scrolling="no"
-              allowtransparency="true"
-              allowfullscreen="true"
-              title="Testimonio real — Lorenza Rojas nutricionista"
-              loading="lazy"
-            ></iframe>
+            <div class="reel-card__placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0z"/>
+              </svg>
+              <span>Reemplaza REEL_ID_1</span>
+            </div>
           </div>
           <div class="reel-card__info">
             <p class="reel-card__name">Nombre, Edad</p>
@@ -347,17 +319,14 @@
           </div>
         </div>
 
-        <!-- Reel 2 -->
-        <div class="reel-card" data-reveal data-stagger="2" role="listitem">
+        <div class="reel-card" data-reveal role="listitem">
           <div class="reel-card__frame">
-            <iframe
-              src="https://www.instagram.com/reel/DWpS_YCgBVL/embed/"
-              scrolling="no"
-              allowtransparency="true"
-              allowfullscreen="true"
-              title="Testimonio real — Lorenza Rojas nutricionista"
-              loading="lazy"
-            ></iframe>
+            <div class="reel-card__placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0z"/>
+              </svg>
+              <span>Reemplaza REEL_ID_2</span>
+            </div>
           </div>
           <div class="reel-card__info">
             <p class="reel-card__name">Nombre, Edad</p>
@@ -365,17 +334,14 @@
           </div>
         </div>
 
-        <!-- Reel 3 -->
-        <div class="reel-card" data-reveal="slide-left" data-stagger="3" role="listitem">
+        <div class="reel-card" data-reveal role="listitem">
           <div class="reel-card__frame">
-            <iframe
-              src="https://www.instagram.com/reel/DYSkgDlJrnb/embed/"
-              scrolling="no"
-              allowtransparency="true"
-              allowfullscreen="true"
-              title="Testimonio real — Lorenza Rojas nutricionista"
-              loading="lazy"
-            ></iframe>
+            <div class="reel-card__placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0z"/>
+              </svg>
+              <span>Reemplaza REEL_ID_3</span>
+            </div>
           </div>
           <div class="reel-card__info">
             <p class="reel-card__name">Nombre, Edad</p>
@@ -388,13 +354,11 @@
   </section>
 
 
-  <!-- ══════════════════════════════════════════════════════════
-       AGENDAMIENTO — CTA principal
-  ══════════════════════════════════════════════════════════ -->
+  <!-- AGENDAMIENTO -->
   <section class="booking" id="agendar" aria-label="Sección de agendamiento">
     <div class="booking__bg" aria-hidden="true"></div>
     <div class="container">
-      <div class="booking__inner" data-reveal="scale-in">
+      <div class="booking__inner" data-reveal>
 
         <span class="label label--light">Primer paso</span>
 
@@ -416,7 +380,7 @@
         <a
           href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl"
           target="_blank" rel="noopener"
-          class="btn btn--primary btn--large btn--magnetic"
+          class="btn btn--primary btn--large"
           aria-label="Ir a plataforma de agendamiento AgendaPro"
         >
           Agendar mi consulta →
@@ -429,9 +393,7 @@
   </section>
 
 
-  <!-- ══════════════════════════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════════════════════════ -->
+  <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
     <div class="container">
 
@@ -450,13 +412,13 @@
         </nav>
 
         <div class="footer__social" aria-label="Redes sociales">
-          <a href="https://www.instagram.com/lorenz.nutri/" target="_blank" rel="noopener" aria-label="Instagram de Lorenza Rojas" class="social-link">
+          <a href="https://www.instagram.com/TU_USUARIO" target="_blank" rel="noopener" aria-label="Instagram de Lorenza Rojas" class="social-link">
             <img src="images/icons/instagram.svg" alt="Instagram" width="20" height="20" loading="lazy" />
           </a>
-          <a href="https://wa.me/56966618638" target="_blank" rel="noopener" aria-label="WhatsApp de Lorenza Rojas" class="social-link">
+          <a href="https://wa.me/56XXXXXXXXX" target="_blank" rel="noopener" aria-label="WhatsApp de Lorenza Rojas" class="social-link">
             <img src="images/icons/whatsapp.svg" alt="WhatsApp" width="20" height="20" loading="lazy" />
           </a>
-          <a href="https://cl.linkedin.com/in/lorenza-rojas-cea-29560129a" target="_blank" rel="noopener" aria-label="LinkedIn de Lorenza Rojas" class="social-link">
+          <a href="https://www.linkedin.com/in/TU_USUARIO" target="_blank" rel="noopener" aria-label="LinkedIn de Lorenza Rojas" class="social-link">
             <img src="images/icons/linkedin.svg" alt="LinkedIn" width="20" height="20" loading="lazy" />
           </a>
           <a href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl" target="_blank" rel="noopener" aria-label="Agendar con AgendaPro" class="social-link">
@@ -474,8 +436,6 @@
     </div>
   </footer>
 
-  <!-- Script oficial Instagram para embeds -->
-  <script async src="https://www.instagram.com/embed.js"></script>
   <script src="js/script.js" defer></script>
 </body>
 </html>
