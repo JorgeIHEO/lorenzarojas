@@ -93,4 +93,15 @@
     }, { passive: true });
   }
 
+  /* ── 7. Pain words rotativas ─────────────────────────────── */
+  const painWords = document.querySelectorAll('.pain-word');
+  if (painWords.length > 0) {
+    let current = 0;
+    setInterval(() => {
+      painWords[current].classList.remove('active');
+      current = (current + 1) % painWords.length;
+      painWords[current].classList.add('active');
+    }, 2500);
+  }
+
 })();
