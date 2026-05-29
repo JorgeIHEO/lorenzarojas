@@ -626,35 +626,16 @@ a  { text-decoration: none; color: inherit; }
 .cases__header .section-sub { color: rgb(142, 159, 171); }
 .cases__header .label { color: rgb(142, 159, 171); }
 .cases__reels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
-.reel-card { display: flex; flex-direction: column; gap: 1rem; }
-.reel-card__frame {
-  position: relative;
+.reel-card { display: flex; flex-direction: column; }
+.reel-card__embed {
   width: 100%;
-  padding-top: 177.78%;
-  border-radius: 4px;
+  border-radius: 12px;
   overflow: hidden;
-  background: var(--bark);
-  box-shadow: 0 12px 40px rgba(44, 36, 22, .12);
 }
-.reel-card__frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
-.reel-card__name { font-size: .78rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgb(142, 159, 171); }
-.reel-card__quote { font-family: var(--font-display); font-size: 1.15rem; font-style: italic; color: rgb(142, 159, 171); line-height: 1.45; }
-
-.reel-card__placeholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: var(--bark-mid);
-  color: rgba(255,255,255,.5);
-  gap: .75rem;
-  font-size: .75rem;
-  letter-spacing: .1em;
-  text-transform: uppercase;
+.reel-card__embed .instagram-media {
+  border-radius: 12px !important;
+  width: 100% !important;
 }
-.reel-card__placeholder svg { opacity: .4; }
 
 /* ── AGENDAMIENTO ────────────────────────────────────────────── */
 .booking {
