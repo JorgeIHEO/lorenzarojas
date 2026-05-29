@@ -4,43 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO -->
+  <!-- SEO primario -->
   <title>Lorenza Rojas | Nutricionista – Recupera tu energía y bienestar real</title>
-  <meta name="description" content="Lorenza Rojas, nutricionista certificada. Planes personalizados presenciales y online para mejorar tu alimentación, energía y salud de forma sostenible." />
-  <meta name="keywords" content="nutricionista, nutrición online, nutricionista Chile, plan nutricional, alimentación saludable, Lorenza Rojas" />
+  <meta name="description" content="Lorenza Rojas, nutricionista certificada en Chile. Planes nutricionales personalizados presenciales y online para mejorar tu alimentación, energía y salud de forma sostenible." />
+  <meta name="keywords" content="nutricionista, nutricionista Chile, nutrición online, plan nutricional personalizado, alimentación saludable, Lorenza Rojas, consulta nutricional" />
   <meta name="author" content="Lorenza Rojas" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://lorenzarojas.cl/" />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
-  <meta property="og:title"       content="Lorenza Rojas | Nutricionista" />
-  <meta property="og:description" content="Planes nutricionales personalizados para recuperar tu energía y bienestar." />
-  <meta property="og:image"       content="images/og-image.jpg" />
+  <meta property="og:locale"      content="es_CL" />
+  <meta property="og:site_name"   content="Lorenza Rojas Nutricionista" />
+  <meta property="og:title"       content="Lorenza Rojas | Nutricionista – Recupera tu energía y bienestar real" />
+  <meta property="og:description" content="Planes nutricionales personalizados para recuperar tu energía y bienestar. Atención presencial y online en Chile y Latinoamérica." />
+  <meta property="og:image"       content="https://lorenzarojas.cl/images/og-image.jpg" />
   <meta property="og:url"         content="https://lorenzarojas.cl/" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@lorenz.nutri" />
   <meta name="twitter:title"       content="Lorenza Rojas | Nutricionista" />
-  <meta name="twitter:description" content="Recupera tu energía y bienestar con nutrición personalizada." />
-  <meta name="twitter:image"       content="images/og-image.jpg" />
+  <meta name="twitter:description" content="Recupera tu energía y bienestar con nutrición personalizada. Sin dietas extremas." />
+  <meta name="twitter:image"       content="https://lorenzarojas.cl/images/og-image.jpg" />
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Physician",
+    "@type": "Dietitian",
     "name": "Lorenza Rojas",
-    "description": "Nutricionista certificada con planes personalizados presenciales y online.",
+    "jobTitle": "Nutricionista",
+    "description": "Nutricionista certificada con planes personalizados presenciales y online para mejorar alimentación, energía y bienestar.",
     "url": "https://lorenzarojas.cl",
+    "telephone": "+56966618638",
     "address": { "@type": "PostalAddress", "addressCountry": "CL" },
+    "priceRange": "$$",
     "sameAs": [
       "https://www.instagram.com/lorenz.nutri/",
       "https://www.linkedin.com/in/lorenza-rojas-cea-29560129a/"
+    ],
+    "offers": [
+      { "@type": "Offer", "name": "Consulta Individual", "description": "Evaluación nutricional completa con plan personalizado." },
+      { "@type": "Offer", "name": "Pack 3 Meses", "description": "Acompañamiento continuo de 3 meses con seguimiento mensual." },
+      { "@type": "Offer", "name": "Pack 6 Meses", "description": "Proceso completo de transformación de hábitos a largo plazo." }
     ]
   }
   </script>
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
@@ -52,13 +64,13 @@
   <!-- NAV -->
   <nav class="nav" id="nav" aria-label="Menú principal">
     <a href="#inicio" class="nav__logo">
-      <img src="images/lorenza_rojas_logo_transparente.svg" alt="Lorenza Rojas" height="40" style="height:40px;width:auto;display:block;" />
+      <img src="images/lorenza_rojas_logo_transparente.svg" alt="Lorenza Rojas Nutricionista" height="40" style="height:40px;width:auto;display:block;" />
     </a>
 
     <button
       class="nav__hamburger"
       id="hamburger"
-      aria-label="Abrir menú"
+      aria-label="Abrir menú de navegación"
       aria-expanded="false"
       aria-controls="nav-menu"
     >
@@ -73,7 +85,7 @@
       <li>
         <a
           href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl"
-          target="_blank" rel="noopener"
+          target="_blank" rel="noopener noreferrer"
           class="nav__cta"
         >Agendar consulta</a>
       </li>
@@ -84,7 +96,7 @@
   <!-- HERO -->
   <section class="hero" id="inicio" aria-label="Sección principal">
 
-    <div class="hero__video-wrap">
+    <div class="hero__video-wrap" aria-hidden="true">
       <iframe
         class="hero__iframe"
         src="https://player.vimeo.com/video/1191940360?autoplay=1&muted=1&loop=1&background=1&playsinline=1"
@@ -94,7 +106,7 @@
         playsinline
         webkit-playsinline
         muted
-        title="Video de presentación Lorenza Rojas Nutricionista"
+        title="Video de fondo decorativo"
       ></iframe>
     </div>
 
@@ -102,7 +114,7 @@
 
     <div class="hero__content" data-reveal>
 
-      <div class="hero__pain-words" aria-label="Dolores comunes de los pacientes">
+      <div class="hero__pain-words" aria-label="Síntomas comunes que Lorenza Rojas trata">
         <span class="pain-word active">¿Cansada sin razón?</span>
         <span class="pain-word">¿Dietas que nunca funcionan?</span>
         <span class="pain-word">¿Hinchazón constante?</span>
@@ -121,7 +133,7 @@
 
       <a
         href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl"
-        target="_blank" rel="noopener"
+        target="_blank" rel="noopener noreferrer"
         class="btn btn--primary hero__btn"
         aria-label="Agendar consulta con Lorenza Rojas"
       >
@@ -138,7 +150,7 @@
 
 
   <!-- SOBRE MÍ -->
-  <section class="about" id="sobre-mi" aria-label="Sobre Lorenza Rojas">
+  <section class="about" id="sobre-mi" aria-label="Sobre Lorenza Rojas, nutricionista">
     <div class="container">
       <div class="about__inner">
 
@@ -146,7 +158,7 @@
           <div class="about__img-main">
             <img
               src="images/lorenza-principal.jpg"
-              alt="Lorenza Rojas, nutricionista certificada"
+              alt="Lorenza Rojas, nutricionista certificada, sonriendo"
               width="480" height="600"
               loading="lazy"
             />
@@ -154,7 +166,7 @@
           <div class="about__img-accent">
             <img
               src="images/lorenza-consultorio.jpg"
-              alt="Lorenza Rojas en consulta nutricional"
+              alt="Lorenza Rojas atendiendo en consulta nutricional"
               width="260" height="320"
               loading="lazy"
             />
@@ -182,7 +194,7 @@
             reales y duraderos.
           </p>
 
-          <ul class="about__credentials" aria-label="Credenciales profesionales">
+          <ul class="about__credentials" aria-label="Credenciales profesionales de Lorenza Rojas">
             <li>🎓 Licenciada en Nutrición y Dietética — [Universidad]</li>
             <li>✦ Especialización en [área de especialidad]</li>
             <li>✦ +X años de experiencia clínica</li>
@@ -191,7 +203,7 @@
 
           <a
             href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl"
-            target="_blank" rel="noopener"
+            target="_blank" rel="noopener noreferrer"
             class="btn btn--secondary btn--lorenza"
           >
             Quiero comenzar
@@ -204,7 +216,7 @@
 
 
   <!-- SERVICIOS -->
-  <section class="services" id="servicios" aria-label="Servicios y planes nutricionales">
+  <section class="services" id="servicios" aria-label="Servicios y planes nutricionales de Lorenza Rojas">
     <div class="container">
 
       <div class="services__header" data-reveal>
@@ -215,8 +227,7 @@
 
       <div class="services__grid">
 
-        <!-- Consulta individual -->
-        <article class="service-card" data-reveal aria-label="Consulta individual">
+        <article class="service-card" data-reveal aria-label="Consulta nutricional individual">
           <div class="service-card__tag">Sesión única</div>
           <div class="service-card__icon" aria-hidden="true">◆</div>
           <h3 class="service-card__title">Consulta Individual</h3>
@@ -231,12 +242,11 @@
             <li>✓ Modalidad presencial u online</li>
           </ul>
           <div class="service-card__btn-wrap">
-            <a href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl" target="_blank" rel="noopener" class="btn btn--outline">Agendar sesión →</a>
+            <a href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Agendar sesión →</a>
           </div>
         </article>
 
-        <!-- Pack 3 meses — DESTACADO -->
-        <article class="service-card service-card--featured" data-reveal aria-label="Pack 3 meses">
+        <article class="service-card service-card--featured" data-reveal aria-label="Pack nutricional 3 meses">
           <div class="service-card__tag">Más popular</div>
           <div class="service-card__icon" aria-hidden="true">✦</div>
           <h3 class="service-card__title">Pack 3 Meses</h3>
@@ -252,12 +262,11 @@
             <li>✓ Modalidad presencial u online</li>
           </ul>
           <div class="service-card__btn-wrap">
-            <a href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl" target="_blank" rel="noopener" class="btn btn--primary">Quiero este plan →</a>
+            <a href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Quiero este plan →</a>
           </div>
         </article>
 
-        <!-- Pack 6 meses -->
-        <article class="service-card" data-reveal aria-label="Pack 6 meses">
+        <article class="service-card" data-reveal aria-label="Pack nutricional 6 meses">
           <div class="service-card__tag">Transformación total</div>
           <div class="service-card__icon" aria-hidden="true">◈</div>
           <h3 class="service-card__title">Pack 6 Meses</h3>
@@ -273,13 +282,12 @@
             <li>✓ Modalidad presencial u online</li>
           </ul>
           <div class="service-card__btn-wrap">
-            <a href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl" target="_blank" rel="noopener" class="btn btn--outline">Quiero este plan →</a>
+            <a href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Quiero este plan →</a>
           </div>
         </article>
 
       </div>
 
-      <!-- Modalidades -->
       <div class="modalities" data-reveal>
         <div class="modality">
           <span class="modality__icon" aria-hidden="true">📍</span>
@@ -299,7 +307,7 @@
 
 
   <!-- CASOS REALES -->
-  <section class="cases" id="casos" aria-label="Casos reales y testimonios en video">
+  <section class="cases" id="casos" aria-label="Testimonios y casos reales de pacientes">
     <div class="container">
 
       <div class="cases__header" data-reveal>
@@ -335,10 +343,9 @@
     </div>
   </section>
 
-  <script async src="https://www.instagram.com/embed.js"></script>
 
-    <!-- AGENDAMIENTO -->
-  <section class="booking" id="agendar" aria-label="Sección de agendamiento">
+  <!-- AGENDAMIENTO -->
+  <section class="booking" id="agendar" aria-label="Agenda tu consulta con Lorenza Rojas">
     <div class="booking__bg" aria-hidden="true"></div>
     <div class="container">
       <div class="booking__inner" data-reveal>
@@ -362,9 +369,9 @@
 
         <a
           href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl"
-          target="_blank" rel="noopener"
+          target="_blank" rel="noopener noreferrer"
           class="btn btn--primary btn--large"
-          aria-label="Ir a plataforma de agendamiento AgendaPro"
+          aria-label="Agendar consulta con Lorenza Rojas en AgendaPro"
         >
           Agendar mi consulta →
         </a>
@@ -391,20 +398,20 @@
           <a href="#sobre-mi">Sobre mí</a>
           <a href="#servicios">Servicios</a>
           <a href="#casos">Casos</a>
-          <a href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl" target="_blank" rel="noopener">Agendar</a>
+          <a href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl" target="_blank" rel="noopener noreferrer">Agendar</a>
         </nav>
 
-        <div class="footer__social" aria-label="Redes sociales">
-          <a href="https://www.instagram.com/lorenz.nutri/" target="_blank" rel="noopener" aria-label="Instagram @lorenz.nutri" class="social-link">
+        <div class="footer__social" aria-label="Redes sociales de Lorenza Rojas">
+          <a href="https://www.instagram.com/lorenz.nutri/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @lorenz.nutri" class="social-link">
             <img src="images/icons/instagram.svg" alt="Instagram" width="20" height="20" loading="lazy" />
           </a>
-          <a href="https://wa.me/56966618638" target="_blank" rel="noopener" aria-label="WhatsApp +56966618638" class="social-link">
+          <a href="https://wa.me/56966618638" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +56 9 6661 8638" class="social-link">
             <img src="images/icons/whatsapp.svg" alt="WhatsApp" width="20" height="20" loading="lazy" />
           </a>
-          <a href="https://www.linkedin.com/in/lorenza-rojas-cea-29560129a/" target="_blank" rel="noopener" aria-label="LinkedIn Lorenza Rojas" class="social-link">
+          <a href="https://www.linkedin.com/in/lorenza-rojas-cea-29560129a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Lorenza Rojas" class="social-link">
             <img src="images/icons/linkedin.svg" alt="LinkedIn" width="20" height="20" loading="lazy" />
           </a>
-          <a href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl" target="_blank" rel="noopener" aria-label="Agendar con AgendaPro" class="social-link">
+          <a href="https://consultanutricionaldelorenzarojas.site.agendapro.com/cl" target="_blank" rel="noopener noreferrer" aria-label="Agendar con AgendaPro" class="social-link">
             <img src="images/icons/agendapro.svg" alt="AgendaPro" width="20" height="20" loading="lazy" />
           </a>
         </div>
@@ -419,6 +426,8 @@
     </div>
   </footer>
 
+  <!-- Instagram embed script -->
+  <script async src="https://www.instagram.com/embed.js"></script>
   <script src="js/script.js" defer></script>
 </body>
 </html>

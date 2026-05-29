@@ -27,14 +27,26 @@
     menu.classList.remove('open');
     hamburger.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+    // iOS fix: restore scroll
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, parseInt(document.body.dataset.scrollY || '0'));
   }
 
   hamburger.addEventListener('click', () => {
     const isOpen = menu.classList.toggle('open');
     hamburger.classList.toggle('open', isOpen);
     hamburger.setAttribute('aria-expanded', String(isOpen));
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+    if (isOpen) {
+      // iOS fix: lock scroll without overflow:hidden
+      document.body.dataset.scrollY = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${window.scrollY}px`;
+      document.body.style.width = '100%';
+    } else {
+      closeMenu();
+    }
   });
 
   menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
