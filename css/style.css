@@ -384,7 +384,8 @@ a  { text-decoration: none; color: inherit; }
   position: relative;
 }
 .about .container,
-.services .container { position: relative; z-index: 1; }
+.services .container,
+.cases .container { position: relative; z-index: 1; }
 .about__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -574,32 +575,36 @@ a  { text-decoration: none; color: inherit; }
 
 /* ── GRADIENTES DE CONTINUIDAD ENTRE SECCIONES ───────────────── */
 
-/* Hero → Sobre mí (púrpura) — ya está en .hero::after */
+/* Hero → Sobre mí: gradiente al fondo del hero (ya en .hero::after) */
 
-/* Sobre mí → Servicios (crema #EDE7DC) */
-.about::after {
+/* Sobre mí → Servicios: gradiente al TOP de servicios, de púrpura a crema */
+.services::before {
   content: '';
   position: absolute;
-  bottom: 0; left: 0;
-  width: 100%; height: 160px;
-  background: linear-gradient(to bottom, rgba(237,231,220,0) 0%, rgb(237,231,220) 100%);
+  top: 0; left: 0;
+  width: 100%; height: 180px;
+  background: linear-gradient(to bottom, rgb(216,100,245) 0%, rgba(237,231,220,0) 100%);
   pointer-events: none;
   z-index: 0;
 }
 
-/* Servicios → Casos (gris oscuro rgb(56,62,66)) */
-.services::after {
+/* Servicios → Casos: gradiente al TOP de casos, de crema a gris oscuro */
+.cases {
+  position: relative;
+  background: rgb(56, 62, 66);
+  padding-block: clamp(5rem, 10vw, 9rem);
+}
+.cases::before {
   content: '';
   position: absolute;
-  bottom: 0; left: 0;
-  width: 100%; height: 160px;
-  background: linear-gradient(to bottom, rgba(56,62,66,0) 0%, rgb(56,62,66) 100%);
+  top: 0; left: 0;
+  width: 100%; height: 180px;
+  background: linear-gradient(to bottom, rgb(237,231,220) 0%, rgba(56,62,66,0) 100%);
   pointer-events: none;
   z-index: 0;
 }
 
-/* Casos → Booking: mismo color, fluido */
-/* Booking → Footer: mismo color, fluido */
+/* Casos, Booking y Footer: mismo color rgb(56,62,66) — fluido sin corte */
 .modalities {
   display: flex;
   align-items: center;
@@ -616,7 +621,6 @@ a  { text-decoration: none; color: inherit; }
 .modality p { font-size: .875rem; color: rgb(142, 159, 171); max-width: 24ch; }
 
 /* ── CASOS / REELS ───────────────────────────────────────────── */
-.cases { background: rgb(56, 62, 66); padding-block: clamp(5rem, 10vw, 9rem); }
 .cases__header { margin-bottom: 3.5rem; }
 .cases__header .section-title { color: rgb(142, 159, 171); }
 .cases__header .section-sub { color: rgb(142, 159, 171); }
