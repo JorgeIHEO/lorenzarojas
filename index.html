@@ -38,7 +38,13 @@
     "description": "Nutricionista certificada con planes personalizados presenciales y online para mejorar alimentación, energía y bienestar.",
     "url": "https://lorenzarojas.cl",
     "telephone": "+56966618638",
-    "address": { "@type": "PostalAddress", "addressCountry": "CL" },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Manquehue Sur 520, oficina 504",
+      "addressLocality": "Las Condes",
+      "addressRegion": "Región Metropolitana",
+      "addressCountry": "CL"
+    },
     "priceRange": "$$",
     "sameAs": [
       "https://www.instagram.com/lorenz.nutri/",
@@ -292,7 +298,7 @@
         <div class="modality">
           <span class="modality__icon" aria-hidden="true">📍</span>
           <h4>Presencial</h4>
-          <p>Consulta en [Ciudad, dirección]. Atención cercana y personalizada.</p>
+          <p>Consulta en Manquehue Sur 520, oficina 504, Las Condes. Atención cercana y personalizada.</p>
         </div>
         <div class="modality__divider" aria-hidden="true"></div>
         <div class="modality">
@@ -316,32 +322,48 @@
         <p class="section-sub">Personas que decidieron cambiar. Esto es lo que lograron.</p>
       </div>
 
-      <div class="cases__reels" role="list">
+      <div class="gallery" role="list">
 
-        <div class="reel-card" data-reveal role="listitem">
-          <blockquote class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/reel/DWpS_YCgBVL/"
-            data-instgrm-version="14">
-          </blockquote>
-        </div>
+        <button class="gallery__item" data-reveal role="listitem" data-img="images/01.jpg" aria-label="Ver fotografía 1 en grande">
+          <img src="images/01.jpg" alt="Resultado caso real 1" loading="lazy" />
+        </button>
 
-        <div class="reel-card" data-reveal role="listitem">
-          <blockquote class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/reel/DVcL2mBAEey/"
-            data-instgrm-version="14">
-          </blockquote>
-        </div>
+        <button class="gallery__item" data-reveal role="listitem" data-img="images/02.jpg" aria-label="Ver fotografía 2 en grande">
+          <img src="images/02.jpg" alt="Resultado caso real 2" loading="lazy" />
+        </button>
 
-        <div class="reel-card" data-reveal role="listitem">
-          <blockquote class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/reel/DMk1X6ntsTc/"
-            data-instgrm-version="14">
-          </blockquote>
-        </div>
+        <button class="gallery__item" data-reveal role="listitem" data-img="images/03.jpg" aria-label="Ver fotografía 3 en grande">
+          <img src="images/03.jpg" alt="Resultado caso real 3" loading="lazy" />
+        </button>
+
+        <button class="gallery__item" data-reveal role="listitem" data-img="images/04.jpg" aria-label="Ver fotografía 4 en grande">
+          <img src="images/04.jpg" alt="Resultado caso real 4" loading="lazy" />
+        </button>
+
+        <button class="gallery__item" data-reveal role="listitem" data-img="images/05.jpg" aria-label="Ver fotografía 5 en grande">
+          <img src="images/05.jpg" alt="Resultado caso real 5" loading="lazy" />
+        </button>
+
+        <button class="gallery__item" data-reveal role="listitem" data-img="images/06.jpg" aria-label="Ver fotografía 6 en grande">
+          <img src="images/06.jpg" alt="Resultado caso real 6" loading="lazy" />
+        </button>
 
       </div>
     </div>
   </section>
+
+  <!-- LIGHTBOX GALERÍA -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar imagen">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="lightbox__inner">
+      <img src="" alt="" id="lightboxImg" />
+    </div>
+  </div>
 
 
   <!-- AGENDAMIENTO -->
@@ -426,8 +448,6 @@
     </div>
   </footer>
 
-  <!-- Instagram embed script -->
-  <script async src="https://www.instagram.com/embed.js"></script>
   <script src="js/script.js" defer></script>
 </body>
 </html>
